@@ -26,7 +26,7 @@ if __name__ == "__main__":
     print("Etat initial :")
     afficher(initial)
 
-    solution = BFS(initial)
+    solution, expanded = BFS(initial)
 
     if solution is None:
         print("Pas de solution")
@@ -34,6 +34,7 @@ if __name__ == "__main__":
         print("Solution :", solution.getSolution())
         print("Cout (g) :", solution.g)
         print("Nombre de coups :", len(solution.getSolution()))
+        print("Noeuds explores :", expanded)
         print()
 
         # simulation : on affiche chaque état du chemin
