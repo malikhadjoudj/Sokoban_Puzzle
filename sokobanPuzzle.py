@@ -4,7 +4,7 @@ class SokobanPuzzle:
         self.height = len(board)
         self.width = len(board[0])
         self.board = deepcopy(board)
-
+        robot_position = None
         for i in range(self.height):
             for j in range(self.width):
                 if self.board[i][j] == 'R':
