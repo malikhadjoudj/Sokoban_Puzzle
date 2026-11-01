@@ -11,8 +11,12 @@ class Node:
             self.g = 0
         else:
             self.g = parent.g + 1
+        self.f = self.g  #f provisoire (h inconnue pour l'instant)
 
-
+    def setF(self, h):         
+        """Calcule f = g + h(etat), avec h une fonction heuristique."""
+        self.f = self.g + h(self.state)
+    
     def getPath(self):
         """Renvoie la liste des etats, du depart jusqu'a ce noeud."""
         chemin = []
